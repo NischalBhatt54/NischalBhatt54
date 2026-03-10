@@ -7,16 +7,20 @@ margin:0;
 
 font-family:'Inter', sans-serif;
 
-line-height:1.6;
+line-height:1.8;
+letter-spacing:0.02em;
 
 }
 
 .hero{
-
 text-align:center;
+padding:160px 20px;
 
-padding:140px 20px;
+background-image: linear-gradient(rgba(13,27,42,0.85), rgba(13,27,42,0.95)),
+url("images/cordyceps.jpg");
 
+background-size:cover;
+background-position:center;
 }
 
 h1{
@@ -34,11 +38,10 @@ margin-bottom:10px;
 }
 
 .tagline{
-
-font-size:20px;
-
-letter-spacing:2px;
-
+text-transform:uppercase;
+font-size:16px;
+letter-spacing:4px;
+color:#9CA3AF;
 }
 
 .subtitle{
@@ -67,7 +70,7 @@ section{
 
 padding:80px 20px;
 
-max-width:800px;
+max-width:1100px;
 
 margin:auto;
 
