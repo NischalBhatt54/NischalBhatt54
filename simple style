@@ -1,0 +1,27 @@
+body {
+font-family: serif;
+background-color: #0c1b2a;
+color: white;
+text-align: center;
+margin: 0;
+}
+
+header {
+padding: 120px 20px;
+}
+
+h1 {
+font-size: 60px;
+color: #c88a4b;
+}
+
+section {
+padding: 60px 20px;
+max-width: 800px;
+margin: auto;
+}
+
+footer {
+padding: 40px;
+font-size: 14px;
+}
