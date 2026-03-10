@@ -42,9 +42,7 @@ linear-gradient(180deg,#0D1B2A,#1B263B);
 
 .hero{
 
-background:
-linear-gradient(rgba(13,27,42,0.35), rgba(13,27,42,0.55)),
-url("images/cordyceps.png");
+background-image:url("images/hero.jpg");
 
 background-size:cover;
 background-position:center;
@@ -52,18 +50,9 @@ background-repeat:no-repeat;
 
 min-height:90vh;
 
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-
-padding:60px 20px;
-
 }
-
 h1{
-
+text-shadow:0 0 30px rgba(0,0,0,0.6);
 font-family:'Cormorant Garamond', serif;
 
 font-size:72px;
