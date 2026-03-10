@@ -43,8 +43,8 @@ linear-gradient(180deg,#0D1B2A,#1B263B);
 .hero{
 
 background:
-linear-gradient(rgba(13,27,42,0.35), rgba(13,27,42,0.55)),
-url("images/hero.jpg");
+linear-gradient(rgba(13,27,42,0.45), rgba(13,27,42,0.65)),
+url("images/cordyceps.jpg");
 
 background-size:cover;
 background-position:center;
