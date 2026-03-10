@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SHILA Functional Foods</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>SHILA</h1>
+<p>Functional Foods</p>
+<p>Crafted for Vitality</p>
+</header>
+
+<section>
+<h2>About</h2>
+<p>SHILA is dedicated to cultivating high quality functional foods inspired by Himalayan traditions and modern research.</p>
+</section>
+
+<section>
+<h2>Cordyceps</h2>
+<p>Cordyceps has been traditionally valued for vitality and endurance across Asian cultures.</p>
+</section>
+
+<section>
+<h2>Coming Soon</h2>
+<p>Small batch launch coming soon.</p>
+</section>
+
+<footer>
+<p>© SHILA Functional Foods</p>
+</footer>
+
+</body>
+</html>
