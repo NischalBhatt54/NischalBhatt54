@@ -42,13 +42,23 @@ linear-gradient(180deg,#0D1B2A,#1B263B);
 
 .hero{
 
-background-image:url("images/hero.jpg");
+background:
+linear-gradient(rgba(13,27,42,0.35), rgba(13,27,42,0.55)),
+url("images/hero.jpg");
 
 background-size:cover;
 background-position:center;
 background-repeat:no-repeat;
 
 min-height:90vh;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+
+padding:60px 20px;
 
 }
 h1{
