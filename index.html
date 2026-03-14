@@ -1,98 +1,199 @@
 <!DOCTYPE html>
-<html>
-<nav>
-<a href="#">Home</a>
-<a href="#">Cordyceps</a>
-<a href="#">Cultivation</a>
-<a href="#">Journal</a>
-<a href="#">Contact</a>
-</nav>
+<html lang="en">
+
 <head>
-<title>SHILA Functional Foods</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="style.css">
+<title>SHILA | Crafted for Vitality</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--navy:#0d1a2d;
+--navy-light:#162640;
+--copper:#c9844a;
+--cream:#f8f5f0;
+--white:#ffffff;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:var(--navy);
+color:var(--cream);
+line-height:1.6;
+}
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+padding:20px 60px;
+background:white;
+z-index:10;
+}
+
+.logo{
+font-family:'Cormorant Garamond',serif;
+letter-spacing:.3em;
+font-size:28px;
+color:var(--copper);
+}
+
+nav ul{
+display:flex;
+gap:40px;
+list-style:none;
+}
+
+nav a{
+text-decoration:none;
+font-size:12px;
+letter-spacing:.2em;
+color:#1a2a3a;
+}
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding-top:100px;
+}
+
+.hero-eyebrow{
+letter-spacing:.4em;
+font-size:12px;
+color:var(--copper);
+margin-bottom:25px;
+}
+
+.hero-title{
+font-family:'Cormorant Garamond',serif;
+font-size:80px;
+font-weight:300;
+margin-bottom:20px;
+}
+
+.hero-subtitle{
+max-width:500px;
+font-size:18px;
+}
+
+section{
+padding:120px 60px;
+max-width:1200px;
+margin:auto;
+}
+
+.section-title{
+font-family:'Cormorant Garamond',serif;
+font-size:48px;
+margin-bottom:25px;
+}
+
+.section-text{
+max-width:600px;
+font-size:18px;
+line-height:1.8;
+}
+
+.why{
+background:var(--cream);
+color:#111;
+}
+
+.footer{
+text-align:center;
+padding:60px;
+font-size:14px;
+color:#bbb;
+}
+
+</style>
 
 </head>
 
 <body>
+
+<nav>
+<div class="logo">SHILA</div>
+
+<ul>
+<li><a href="#">ABOUT</a></li>
+<li><a href="#">CORDYCEPS</a></li>
+<li><a href="#">ORIGIN</a></li>
+</ul>
+</nav>
+
 <section class="hero">
 
-<h1>SHILA</h1>
+<div class="hero-eyebrow">FUNCTIONAL CORDYCEPS</div>
 
-<p class="tagline">Functional Foods</p>
+<h1 class="hero-title">SHILA</h1>
 
-<p class="subtitle">Crafted for Vitality</p>
-
-<p class="description">
-Small batch cordyceps cultivation inspired by Himalayan tradition
-and guided by modern research.
+<p class="hero-subtitle">
+Crafted for vitality.  
+Pure cordyceps fruiting bodies cultivated in the Himalayan foothills.
 </p>
 
 </section>
 
-<section class="about">
-
-<h2>Our Philosophy</h2>
-
-<p>
-SHILA is dedicated to cultivating functional foods that support vitality,
-endurance, and balance. Our work combines traditional knowledge with
-carefully controlled cultivation practices.
-</p>
-
-</section>
-
-<section class="cordyceps">
-
-<h2>Cordyceps</h2>
-
-<p>
-Cordyceps has been traditionally valued across Asia for supporting
-vitality and endurance. Modern research continues to explore its
-bioactive compounds such as cordycepin and adenosine.
-</p>
-
-</section>
-
-<section class="cultivation">
-
-<h2>Cultivation</h2>
-
-<p>
-Our cordyceps are cultivated in small batches in the Himalayan
-foothills of Northern India using controlled indoor environments
-designed for purity and consistency.
-</p>
-
-</section>
-
-<section class="coming">
-
-<h2>Coming Soon</h2>
-
-<p>
-We are currently conducting cultivation trials and preparing
-for our first small batch release.
-</p>
-
-</section>
 <section>
-<h2>Journal</h2>
 
-<p>Cultivation trials, research notes, and insights from building a small batch cordyceps farm.</p>
+<h2 class="section-title">Why Cordyceps</h2>
+
+<p class="section-text">
+Cordyceps has been traditionally valued across Himalayan cultures for vitality,
+endurance and resilience. Known historically as a rare alpine fungus,
+it has long been associated with stamina, breath and sustained energy.
+</p>
 
 </section>
-<footer>
 
-<p>Dehradun • Himalayan Foothills</p>
+<section class="why">
 
-<p>contact@shilafoods.com</p>
+<h2 class="section-title">Our Approach</h2>
 
-<p>© SHILA Functional Foods</p>
+<p class="section-text">
+SHILA focuses on cultivating pure fruiting bodies using controlled
+conditions that preserve the integrity of this remarkable fungus.
+No fillers, no powders — only the fruiting body.
+</p>
 
-</footer>
+</section>
+
+<section>
+
+<h2 class="section-title">Coming Soon</h2>
+
+<p class="section-text">
+Our first harvest is currently in cultivation.  
+Join us as SHILA begins its journey.
+</p>
+
+</section>
+
+<div class="footer">
+
+© SHILA
+
+</div>
 
 </body>
 
