@@ -110,27 +110,30 @@ position:relative;
 overflow:hidden;
 }
 
-/* prism diagonal pattern */
-
 .section-dark::before{
 content:"";
 position:absolute;
-top:-50%;
-left:-20%;
-width:200%;
-height:200%;
-background:
-linear-gradient(25deg, transparent 48%, rgba(184,115,51,0.15) 49%, rgba(184,115,51,0.15) 50%, transparent 51%),
-linear-gradient(60deg, transparent 48%, rgba(184,115,51,0.08) 49%, rgba(184,115,51,0.08) 50%, transparent 51%),
-linear-gradient(-25deg, transparent 48%, rgba(184,115,51,0.1) 49%, rgba(184,115,51,0.1) 50%, transparent 51%);
-pointer-events:none;
-}
+top:0;
+left:0;
+width:100%;
+height:100%;
 
-.section-dark h2{
-font-family:"Playfair Display", serif;
-font-size:36px;
-margin-bottom:20px;
-color:white;
+background:
+linear-gradient(28deg, transparent 49%, rgba(184,115,51,0.15) 50%, transparent 51%),
+linear-gradient(-42deg, transparent 49%, rgba(184,115,51,0.12) 50%, transparent 51%),
+linear-gradient(63deg, transparent 49%, rgba(184,115,51,0.08) 50%, transparent 51%),
+linear-gradient(-12deg, transparent 49%, rgba(184,115,51,0.1) 50%, transparent 51%),
+linear-gradient(115deg, transparent 49%, rgba(184,115,51,0.06) 50%, transparent 51%);
+
+background-size:
+420px 420px,
+360px 360px,
+500px 500px,
+300px 300px,
+460px 460px;
+
+opacity:.35;
+pointer-events:none;
 }
 
 /* INFO GRID */
