@@ -1,25 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>SHILA | Crafted for Vitality</title>
+<title>SHILA | Functional Foods</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 
 :root{
---navy:#0d1a2d;
---navy-light:#162640;
---copper:#c9844a;
---cream:#f8f5f0;
---white:#ffffff;
+--cream:#F6F3EF;
+--navy:#0F1A2A;
+--copper:#B87333;
 }
 
 *{
@@ -29,172 +23,256 @@ box-sizing:border-box;
 }
 
 body{
-font-family:'Inter',sans-serif;
-background:var(--navy);
-color:var(--cream);
-line-height:1.6;
+font-family:Inter, sans-serif;
+background:var(--cream);
+color:#333;
+line-height:1.7;
 }
+
+/* NAVBAR */
 
 nav{
-position:fixed;
-top:0;
-width:100%;
 display:flex;
 justify-content:space-between;
-padding:20px 60px;
+align-items:center;
+padding:30px 8%;
 background:white;
-z-index:10;
+border-bottom:1px solid rgba(0,0,0,0.05);
 }
 
-.logo{
-font-family:'Cormorant Garamond',serif;
-letter-spacing:.3em;
+.brand{
+font-family:"Playfair Display", serif;
 font-size:28px;
 color:var(--copper);
+letter-spacing:4px;
 }
 
-nav ul{
+.navlinks{
 display:flex;
 gap:40px;
-list-style:none;
 }
 
-nav a{
+.navlinks a{
 text-decoration:none;
-font-size:12px;
-letter-spacing:.2em;
-color:#1a2a3a;
+color:#555;
+font-size:14px;
 }
+
+/* HERO */
 
 .hero{
-height:100vh;
+height:85vh;
 display:flex;
-flex-direction:column;
-justify-content:center;
 align-items:center;
+justify-content:center;
 text-align:center;
-padding-top:100px;
+position:relative;
+overflow:hidden;
 }
 
-.hero-eyebrow{
-letter-spacing:.4em;
-font-size:12px;
-color:var(--copper);
+.hero::before{
+content:"";
+position:absolute;
+width:2px;
+height:160%;
+background:linear-gradient(var(--copper),transparent);
+transform:rotate(25deg);
+left:50%;
+top:-20%;
+opacity:.35;
+}
+
+.hero-logo{
+width:240px;
 margin-bottom:25px;
 }
 
-.hero-title{
-font-family:'Cormorant Garamond',serif;
-font-size:80px;
-font-weight:300;
+.hero h1{
+font-family:"Playfair Display", serif;
+font-size:58px;
+letter-spacing:8px;
+color:var(--copper);
+}
+
+.hero p{
+margin-top:20px;
+font-size:18px;
+color:#555;
+}
+
+/* NAVY SECTION */
+
+.section-dark{
+background:var(--navy);
+color:white;
+padding:120px 10%;
+position:relative;
+}
+
+.section-dark::after{
+content:"";
+position:absolute;
+width:2px;
+height:160%;
+background:linear-gradient(var(--copper),transparent);
+transform:rotate(25deg);
+right:20%;
+top:-20%;
+opacity:.25;
+}
+
+.section-dark h2{
+font-family:"Playfair Display", serif;
+font-size:36px;
+color:white;
 margin-bottom:20px;
 }
 
-.hero-subtitle{
-max-width:500px;
-font-size:18px;
-}
+/* INFO GRID */
 
-section{
-padding:120px 60px;
-max-width:1200px;
-margin:auto;
-}
-
-.section-title{
-font-family:'Cormorant Garamond',serif;
-font-size:48px;
-margin-bottom:25px;
-}
-
-.section-text{
-max-width:600px;
-font-size:18px;
-line-height:1.8;
-}
-
-.why{
+.info{
+padding:120px 10%;
 background:var(--cream);
-color:#111;
 }
 
-.footer{
+.info-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:60px;
+}
+
+.info h3{
+font-family:"Playfair Display", serif;
+color:var(--copper);
+font-size:24px;
+margin-bottom:15px;
+}
+
+/* FOOTER */
+
+footer{
+background:white;
+padding:40px;
 text-align:center;
-padding:60px;
 font-size:14px;
-color:#bbb;
+color:#777;
 }
 
 </style>
-
 </head>
+
 
 <body>
 
 <nav>
-<div class="logo">SHILA</div>
 
-<ul>
-<li><a href="#">ABOUT</a></li>
-<li><a href="#">CORDYCEPS</a></li>
-<li><a href="#">ORIGIN</a></li>
-</ul>
+<div class="brand">SHILA</div>
+
+<div class="navlinks">
+<a href="#">About</a>
+<a href="#">Cordyceps</a>
+<a href="#">Philosophy</a>
+</div>
+
 </nav>
+
 
 <section class="hero">
 
-<div class="hero-eyebrow">FUNCTIONAL CORDYCEPS</div>
+<div>
 
-<h1 class="hero-title">SHILA</h1>
+<img src="logo.png" class="hero-logo">
 
-<p class="hero-subtitle">
-Crafted for vitality.  
-Pure cordyceps fruiting bodies cultivated in the Himalayan foothills.
-</p>
+<h1>SHILA</h1>
 
-</section>
-
-<section>
-
-<h2 class="section-title">Why Cordyceps</h2>
-
-<p class="section-text">
-Cordyceps has been traditionally valued across Himalayan cultures for vitality,
-endurance and resilience. Known historically as a rare alpine fungus,
-it has long been associated with stamina, breath and sustained energy.
-</p>
-
-</section>
-
-<section class="why">
-
-<h2 class="section-title">Our Approach</h2>
-
-<p class="section-text">
-SHILA focuses on cultivating pure fruiting bodies using controlled
-conditions that preserve the integrity of this remarkable fungus.
-No fillers, no powders — only the fruiting body.
-</p>
-
-</section>
-
-<section>
-
-<h2 class="section-title">Coming Soon</h2>
-
-<p class="section-text">
-Our first harvest is currently in cultivation.  
-Join us as SHILA begins its journey.
-</p>
-
-</section>
-
-<div class="footer">
-
-© SHILA
+<p>Functional foods crafted for vitality</p>
 
 </div>
 
-</body>
+</section>
 
+
+
+<section class="section-dark">
+
+<h2>The Power of Cordyceps</h2>
+
+<p>
+
+Cordyceps are a rare class of medicinal fungi long valued in Himalayan traditions. 
+Historically associated with endurance and vitality, they have been used for centuries 
+in traditional wellness practices.
+
+Modern scientific research has begun exploring their bioactive compounds, 
+including cordycepin and polysaccharides, which are studied for their potential 
+roles in cellular energy processes and oxygen utilization.
+
+At SHILA, we explore cordyceps not as a trend, but as part of a deeper tradition 
+of functional nourishment rooted in nature.
+
+</p>
+
+</section>
+
+
+
+<section class="info">
+
+<div class="info-grid">
+
+<div>
+
+<h3>Traditional Heritage</h3>
+
+<p>
+
+Cordyceps have been traditionally valued in Himalayan regions 
+where they were associated with resilience and vitality in high altitude environments.
+
+</p>
+
+</div>
+
+
+<div>
+
+<h3>Functional Nutrition</h3>
+
+<p>
+
+Today cordyceps are explored as a functional food ingredient 
+rich in naturally occurring compounds that support a balanced lifestyle.
+
+</p>
+
+</div>
+
+
+<div>
+
+<h3>Craft & Purity</h3>
+
+<p>
+
+Our approach emphasizes careful cultivation, 
+clean processes, and respect for the natural origins 
+of this remarkable fungus.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+© SHILA Functional Foods
+
+</footer>
+
+
+</body>
 </html>
