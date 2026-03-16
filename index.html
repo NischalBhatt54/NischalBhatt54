@@ -103,29 +103,34 @@ color:#555;
 /* NAVY SECTION */
 
 .section-dark{
-background:var(--navy);
+background:#0F1A2A;
 color:white;
 padding:120px 10%;
 position:relative;
+overflow:hidden;
 }
 
-.section-dark::after{
+/* prism diagonal pattern */
+
+.section-dark::before{
 content:"";
 position:absolute;
-width:2px;
-height:160%;
-background:linear-gradient(var(--copper),transparent);
-transform:rotate(25deg);
-right:20%;
-top:-20%;
-opacity:.25;
+top:-50%;
+left:-20%;
+width:200%;
+height:200%;
+background:
+linear-gradient(25deg, transparent 48%, rgba(184,115,51,0.15) 49%, rgba(184,115,51,0.15) 50%, transparent 51%),
+linear-gradient(60deg, transparent 48%, rgba(184,115,51,0.08) 49%, rgba(184,115,51,0.08) 50%, transparent 51%),
+linear-gradient(-25deg, transparent 48%, rgba(184,115,51,0.1) 49%, rgba(184,115,51,0.1) 50%, transparent 51%);
+pointer-events:none;
 }
 
 .section-dark h2{
 font-family:"Playfair Display", serif;
 font-size:36px;
-color:white;
 margin-bottom:20px;
+color:white;
 }
 
 /* INFO GRID */
