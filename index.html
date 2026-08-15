@@ -1,286 +1,1074 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 
-<title>SHILA | Functional Foods</title>
+  <meta name="description"
+        content="SHILA Foods — cultivated Cordyceps militaris from Dehradun, Uttarakhand, India.">
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <title>SHILA Foods | Crafted for Vitality</title>
 
-<style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-:root{
---cream:#F6F3EF;
---navy:#0F1A2A;
---copper:#B87333;
-}
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-body{
-font-family:Inter, sans-serif;
-background:var(--cream);
-color:#333;
-line-height:1.7;
-}
-
-/* NAVBAR */
-
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:30px 8%;
-background:white;
-border-bottom:1px solid rgba(0,0,0,0.05);
-}
-
-.brand{
-font-family:"Playfair Display", serif;
-font-size:28px;
-color:var(--copper);
-letter-spacing:4px;
-}
-
-.navlinks{
-display:flex;
-gap:40px;
-}
-
-.navlinks a{
-text-decoration:none;
-color:#555;
-font-size:14px;
-}
-
-/* HERO */
-
-.hero{
-height:85vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-position:relative;
-overflow:hidden;
-}
-
-.hero::before{
-content:"";
-position:absolute;
-width:2px;
-height:160%;
-background:linear-gradient(var(--copper),transparent);
-transform:rotate(25deg);
-left:50%;
-top:-20%;
-opacity:.35;
-}
-
-.hero-logo{
-width:240px;
-margin-bottom:25px;
-}
-
-.hero h1{
-font-family:"Playfair Display", serif;
-font-size:58px;
-letter-spacing:8px;
-color:var(--copper);
-}
-
-.hero p{
-margin-top:20px;
-font-size:18px;
-color:#555;
-}
-
-/* NAVY SECTION */
-
-.section-dark{
-background:#0F1A2A;
-color:white;
-padding:120px 10%;
-position:relative;
-overflow:hidden;
-}
-
-.section-dark::before{
-content:"";
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-
-background:
-linear-gradient(28deg, transparent 49%, rgba(184,115,51,0.15) 50%, transparent 51%),
-linear-gradient(-42deg, transparent 49%, rgba(184,115,51,0.12) 50%, transparent 51%),
-linear-gradient(63deg, transparent 49%, rgba(184,115,51,0.08) 50%, transparent 51%),
-linear-gradient(-12deg, transparent 49%, rgba(184,115,51,0.1) 50%, transparent 51%),
-linear-gradient(115deg, transparent 49%, rgba(184,115,51,0.06) 50%, transparent 51%);
-
-background-size:
-420px 420px,
-360px 360px,
-500px 500px,
-300px 300px,
-460px 460px;
-
-opacity:.35;
-pointer-events:none;
-}
-
-/* INFO GRID */
-
-.info{
-padding:120px 10%;
-background:var(--cream);
-}
-
-.info-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:60px;
-}
-
-.info h3{
-font-family:"Playfair Display", serif;
-color:var(--copper);
-font-size:24px;
-margin-bottom:15px;
-}
-
-/* FOOTER */
-
-footer{
-background:white;
-padding:40px;
-text-align:center;
-font-size:14px;
-color:#777;
-}
-
-</style>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 
 <body>
 
-<nav>
+<header class="site-header" id="site-header">
 
-<div class="brand">SHILA</div>
+  <div class="container nav-wrap">
 
-<div class="navlinks">
-<a href="#">About</a>
-<a href="#">Cordyceps</a>
-<a href="#">Philosophy</a>
-</div>
+    <a class="brand-mini" href="#home" aria-label="SHILA Foods home">
 
-</nav>
+      <span class="brand-mark" aria-hidden="true">
+        <i></i>
+        <b></b>
+      </span>
+
+      <span>SHILA</span>
+
+    </a>
+
+    <button class="menu-toggle"
+            aria-expanded="false"
+            aria-controls="primary-nav">
+
+      <span></span>
+      <span></span>
+      <span></span>
+
+      <small>Menu</small>
+
+    </button>
+
+    <nav id="primary-nav" aria-label="Primary navigation">
+
+      <a href="#home">Home</a>
+      <a href="#knowledge">Knowledge</a>
+      <a href="#cultivation">Cultivation</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+
+    </nav>
+
+  </div>
+
+</header>
 
 
-<section class="hero">
+<main>
 
-<div>
 
-<img src="logo.png" class="hero-logo">
+<!-- =========================================================
+     HERO
+========================================================= -->
 
-<h1>SHILA</h1>
+<section class="hero" id="home">
 
-<p>Functional foods crafted for vitality</p>
+  <div class="orbit one"></div>
+  <div class="orbit two"></div>
 
-</div>
+  <div class="hero-emblem" aria-hidden="true">
+
+    <i></i>
+    <b></b>
+
+  </div>
+
+  <div class="hero-content">
+
+    <p class="eyebrow">
+      SHILA FOODS
+    </p>
+
+    <h1>
+      SHILA
+    </h1>
+
+    <p class="tagline">
+      Crafted for Vitality
+    </p>
+
+  </div>
+
+  <a class="scroll-cue" href="#about">
+
+    Explore
+    <span>↓</span>
+
+  </a>
+
+</section>
+
+
+
+<!-- =========================================================
+     WHAT IS SHILA
+========================================================= -->
+
+<section class="section split light" id="about">
+
+  <div class="container split-grid">
+
+    <div class="image-placeholder">
+
+      <span>01</span>
+
+      <strong>
+        YOUR PHOTOGRAPH
+      </strong>
+
+      <small>
+        Replace this block with a SHILA image later.
+      </small>
+
+    </div>
+
+
+    <div class="copy">
+
+      <p class="eyebrow">
+        OUR PHILOSOPHY
+      </p>
+
+      <h2>
+        What is <em>SHILA</em>?
+      </h2>
+
+      <p class="lead">
+
+        SHILA was built around a simple idea:
+        <strong>quality before quantity.</strong>
+
+      </p>
+
+      <p>
+
+        Rather than pursuing larger and larger production
+        volumes, we deliberately cultivate
+        <em>Cordyceps militaris</em> in limited batches.
+
+        This allows us to devote greater attention to the
+        cultivation environment and to each stage of the
+        growing process.
+
+      </p>
+
+      <p>
+
+        Cordyceps militaris is a specialized,
+        resource-intensive cultivated product.
+
+        For SHILA, careful cultivation is not an
+        afterthought—it is the foundation of the brand.
+
+      </p>
+
+    </div>
+
+  </div>
 
 </section>
 
 
 
-<section class="section-dark">
+<!-- =========================================================
+     KNOWLEDGE
+========================================================= -->
 
-<h2>The Power of Cordyceps</h2>
+<section class="section" id="knowledge">
 
-<p>
+  <div class="container">
 
-Cordyceps are a rare class of medicinal fungi long valued in Himalayan traditions. 
-Historically associated with endurance and vitality, they have been used for centuries 
-in traditional wellness practices.
+    <div class="heading centered">
 
-Modern scientific research has begun exploring their bioactive compounds, 
-including cordycepin and polysaccharides, which are studied for their potential 
-roles in cellular energy processes and oxygen utilization.
+      <p class="eyebrow">
+        THE SHILA KNOWLEDGE
+      </p>
 
-At SHILA, we explore cordyceps not as a trend, but as part of a deeper tradition 
-of functional nourishment rooted in nature.
+      <h2>
+        Understanding <em>Cordyceps militaris</em>
+      </h2>
 
-</p>
+      <p>
+
+        Explore the biology, cultivation, compounds,
+        research and practical considerations surrounding
+        Cordyceps.
+
+      </p>
+
+    </div>
+
+
+    <div class="knowledge-grid">
+
+
+      <a class="card"
+         href="knowledge/what-is-cordyceps.html">
+
+        <span>01</span>
+
+        <h3>
+          What is <em>Cordyceps militaris</em>?
+        </h3>
+
+        <p>
+
+          An introduction to the species, its biology,
+          traditional context and modern interest.
+
+        </p>
+
+        <b>
+          Read article →
+        </b>
+
+      </a>
+
+
+
+      <a class="card"
+         href="knowledge/how-it-grows.html">
+
+        <span>02</span>
+
+        <h3>
+          How does it grow?
+        </h3>
+
+        <p>
+
+          From natural insect hosts to controlled
+          cultivation on artificial substrates.
+
+        </p>
+
+        <b>
+          Read article →
+        </b>
+
+      </a>
+
+
+
+      <a class="card"
+         href="knowledge/wild-vs-cultivated.html">
+
+        <span>03</span>
+
+        <h3>
+          Wild vs cultivated
+        </h3>
+
+        <p>
+
+          A biological and practical comparison of
+          <em>Ophiocordyceps sinensis</em> and
+          <em>C. militaris</em>.
+
+        </p>
+
+        <b>
+          Read article →
+        </b>
+
+      </a>
+
+
+
+      <a class="card"
+         href="knowledge/compounds.html">
+
+        <span>04</span>
+
+        <h3>
+          Compounds
+        </h3>
+
+        <p>
+
+          Explore cordycepin, adenosine,
+          polysaccharides and other studied constituents.
+
+        </p>
+
+        <b>
+          Read article →
+        </b>
+
+      </a>
+
+
+
+      <a class="card"
+         href="knowledge/research.html">
+
+        <span>05</span>
+
+        <h3>
+          Research & potential benefits
+        </h3>
+
+        <p>
+
+          A research-led look at areas being investigated
+          in <em>Cordyceps militaris</em>.
+
+        </p>
+
+        <b>
+          Read article →
+        </b>
+
+      </a>
+
+
+
+      <a class="card"
+         href="knowledge/how-to-consume.html">
+
+        <span>06</span>
+
+        <h3>
+          How to consume Cordyceps
+        </h3>
+
+        <p>
+
+          Explore practical preparation methods such as
+          tea, powder and extracts.
+
+        </p>
+
+        <b>
+          Read article →
+        </b>
+
+      </a>
+
+
+    </div>
+
+  </div>
 
 </section>
 
 
 
-<section class="info">
+<!-- =========================================================
+     WHY SHILA
+========================================================= -->
 
-<div class="info-grid">
+<section class="section dark">
 
-<div>
+  <div class="container">
 
-<h3>Traditional Heritage</h3>
+    <div class="why-intro">
 
-<p>
+      <div>
 
-Cordyceps have been traditionally valued in Himalayan regions 
-where they were associated with resilience and vitality in high altitude environments.
+        <p class="eyebrow">
+          WHY SHILA
+        </p>
 
-</p>
+        <h2>
 
-</div>
+          Quality is not an afterthought.
 
+          <br>
 
-<div>
+          <em>It is the reason we cultivate.</em>
 
-<h3>Functional Nutrition</h3>
+        </h2>
 
-<p>
-
-Today cordyceps are explored as a functional food ingredient 
-rich in naturally occurring compounds that support a balanced lifestyle.
-
-</p>
-
-</div>
+      </div>
 
 
-<div>
+      <p>
 
-<h3>Craft & Purity</h3>
+        We keep production intentionally focused so that
+        greater attention can be given to the environment
+        and conditions in which each crop develops.
 
-<p>
+      </p>
 
-Our approach emphasizes careful cultivation, 
-clean processes, and respect for the natural origins 
-of this remarkable fungus.
+    </div>
 
-</p>
 
-</div>
+    <div class="principles">
 
-</div>
+
+      <article>
+
+        <span>01</span>
+
+        <h3>
+          Small-batch cultivation
+        </h3>
+
+        <p>
+
+          Limited production allows us to give each
+          cultivation cycle greater attention.
+
+        </p>
+
+      </article>
+
+
+
+      <article>
+
+        <span>02</span>
+
+        <h3>
+          Controlled environment
+        </h3>
+
+        <p>
+
+          Growing conditions are carefully managed
+          throughout the cultivation cycle.
+
+        </p>
+
+      </article>
+
+
+
+      <article>
+
+        <span>03</span>
+
+        <h3>
+          Optimized growing conditions
+        </h3>
+
+        <p>
+
+          We focus on refining the growing environment
+          to support healthy development and quality.
+
+        </p>
+
+      </article>
+
+
+    </div>
+
+  </div>
 
 </section>
 
+
+
+<!-- =========================================================
+     CULTIVATION
+========================================================= -->
+
+<section class="section light" id="cultivation">
+
+  <div class="container">
+
+    <div class="heading centered">
+
+      <p class="eyebrow">
+        OUR CULTIVATION
+      </p>
+
+      <h2>
+        From culture to <em>fruiting body</em>.
+      </h2>
+
+      <p>
+
+        Follow the stages of our indoor
+        <em>Cordyceps militaris</em> cultivation process.
+
+      </p>
+
+    </div>
+
+
+    <div class="cultivation-grid">
+
+
+      <a href="cultivation/culture.html">
+
+        <div>
+          01
+          <small>PHOTO</small>
+        </div>
+
+        <strong>
+          Culture →
+        </strong>
+
+      </a>
+
+
+
+      <a href="cultivation/substrate.html">
+
+        <div>
+          02
+          <small>PHOTO</small>
+        </div>
+
+        <strong>
+          Substrate →
+        </strong>
+
+      </a>
+
+
+
+      <a href="cultivation/inoculation.html">
+
+        <div>
+          03
+          <small>PHOTO</small>
+        </div>
+
+        <strong>
+          Inoculation →
+        </strong>
+
+      </a>
+
+
+
+      <a href="cultivation/colonisation.html">
+
+        <div>
+          04
+          <small>PHOTO</small>
+        </div>
+
+        <strong>
+          Colonisation →
+        </strong>
+
+      </a>
+
+
+
+      <a href="cultivation/fruiting.html">
+
+        <div>
+          05
+          <small>PHOTO</small>
+        </div>
+
+        <strong>
+          Fruiting →
+        </strong>
+
+      </a>
+
+
+
+      <a href="cultivation/harvest.html">
+
+        <div>
+          06
+          <small>PHOTO</small>
+        </div>
+
+        <strong>
+          Harvest →
+        </strong>
+
+      </a>
+
+
+
+      <a href="cultivation/drying.html">
+
+        <div>
+          07
+          <small>PHOTO</small>
+        </div>
+
+        <strong>
+          Drying →
+        </strong>
+
+      </a>
+
+
+
+      <a href="cultivation/packaging.html">
+
+        <div>
+          08
+          <small>PHOTO</small>
+        </div>
+
+        <strong>
+          Packaging →
+        </strong>
+
+      </a>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     OUR STORY
+========================================================= -->
+
+<section class="section split story" id="story">
+
+  <div class="container split-grid">
+
+
+    <div class="image-placeholder">
+
+      <span>02</span>
+
+      <strong>
+        YOUR PHOTOGRAPH
+      </strong>
+
+      <small>
+        A Dehradun, cultivation or SHILA image can go here.
+      </small>
+
+    </div>
+
+
+
+    <div class="copy">
+
+      <p class="eyebrow">
+        OUR STORY
+      </p>
+
+      <h2>
+        Why <em>SHILA</em> exists
+      </h2>
+
+      <p>
+
+        Growing up in Dehradun, with roots in Pauri Garhwal,
+        the Himalayas and the traditional herbs associated
+        with the region were always familiar.
+
+      </p>
+
+      <p>
+
+        Curiosity about Himalayan Cordyceps led us to
+        <em>Cordyceps militaris</em>, which we initially began
+        cultivating as a hobby for personal consumption.
+
+      </p>
+
+      <p>
+
+        Encouraging results across multiple growing cycles
+        changed the idea from a personal experiment into
+        something we wanted to develop further: a small,
+        quality-focused business built around careful
+        cultivation.
+
+      </p>
+
+      <p class="closing">
+
+        <strong>
+
+          SHILA grew from the desire to share that same
+          care and attention to quality with others.
+
+        </strong>
+
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FAQ
+========================================================= -->
+
+<section class="section light" id="faq">
+
+  <div class="container faq">
+
+    <div class="heading centered">
+
+      <p class="eyebrow">
+        FAQ
+      </p>
+
+      <h2>
+        Questions, answered.
+      </h2>
+
+      <p>
+
+        Simple answers to questions people commonly ask
+        about Cordyceps.
+
+      </p>
+
+    </div>
+
+
+    <details>
+
+      <summary>
+        What is Cordyceps?
+      </summary>
+
+      <p>
+        Replace this answer with your preferred explanation.
+      </p>
+
+    </details>
+
+
+    <details>
+
+      <summary>
+        Why consume Cordyceps?
+      </summary>
+
+      <p>
+        Replace this answer with your evidence-based answer.
+      </p>
+
+    </details>
+
+
+    <details>
+
+      <summary>
+        Are there any side effects?
+      </summary>
+
+      <p>
+        Replace this answer with your carefully worded
+        answer and appropriate cautions.
+      </p>
+
+    </details>
+
+
+    <details>
+
+      <summary>
+        How is Cordyceps consumed?
+      </summary>
+
+      <p>
+        Replace this answer with your preferred preparation
+        methods.
+      </p>
+
+    </details>
+
+
+    <details>
+
+      <summary>
+        How is Cordyceps militaris different from
+        Cordyceps sinensis?
+      </summary>
+
+      <p>
+        Replace this answer with your comparison.
+      </p>
+
+    </details>
+
+
+    <details>
+
+      <summary>
+        What is the daily dosage?
+      </summary>
+
+      <p>
+
+        Leave this as a placeholder until the product format,
+        serving size and appropriate guidance are finalized.
+
+      </p>
+
+    </details>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+
+<section class="section contact" id="contact">
+
+  <div class="container contact-grid">
+
+
+    <div>
+
+      <p class="eyebrow">
+        GET IN TOUCH
+      </p>
+
+      <h2>
+        Contact <em>SHILA</em>.
+      </h2>
+
+      <p>
+
+        Questions about Cordyceps, cultivation or SHILA Foods?
+        We'd be glad to hear from you.
+
+      </p>
+
+    </div>
+
+
+    <div class="contact-list">
+
+
+      <a href="mailto:shylafoodsindia@gmail.com">
+
+        <span>Email</span>
+
+        shylafoodsindia@gmail.com
+
+      </a>
+
+
+      <a href="tel:+917976105394">
+
+        <span>Phone</span>
+
+        +91 79761 05394
+
+      </a>
+
+
+      <a href="https://wa.me/917976105394"
+         target="_blank"
+         rel="noopener">
+
+        <span>WhatsApp</span>
+
+        Message SHILA
+
+      </a>
+
+
+      <div>
+
+        <span>Location</span>
+
+        Dehradun, Uttarakhand, India
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
 
 <footer>
 
-© SHILA Functional Foods
+  <div class="container footer-grid">
+
+
+    <div>
+
+      <div class="footer-logo">
+
+        <span class="brand-mark">
+
+          <i></i>
+          <b></b>
+
+        </span>
+
+        <span>
+
+          SHILA
+
+          <br>
+
+          <small>
+            SHILA FOODS
+          </small>
+
+        </span>
+
+      </div>
+
+      <p>
+        Crafted for Vitality.
+      </p>
+
+    </div>
+
+
+    <div class="footer-links">
+
+      <a href="#home">Home</a>
+      <a href="#knowledge">Knowledge</a>
+      <a href="#cultivation">Cultivation</a>
+      <a href="#about">About</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+
+    </div>
+
+
+    <div class="footer-contact">
+
+      Dehradun, Uttarakhand, India
+
+      <br>
+
+      <a href="mailto:shylafoodsindia@gmail.com">
+        shylafoodsindia@gmail.com
+      </a>
+
+      <br>
+
+      <a href="https://wa.me/917976105394">
+        WhatsApp
+      </a>
+
+    </div>
+
+
+  </div>
+
+
+  <div class="container footer-bottom">
+
+    <span>
+      © <span id="year"></span> SHILA Foods. All rights reserved.
+    </span>
+
+    <span>
+      Functional foods · Cordyceps militaris
+    </span>
+
+  </div>
 
 </footer>
 
+
+
+<script>
+
+const header =
+  document.getElementById('site-header');
+
+const toggle =
+  document.querySelector('.menu-toggle');
+
+const nav =
+  document.getElementById('primary-nav');
+
+
+addEventListener(
+  'scroll',
+  () => {
+
+    header.classList.toggle(
+      'scrolled',
+      scrollY > 30
+    );
+
+  },
+  {passive:true}
+);
+
+
+toggle.addEventListener(
+  'click',
+  () => {
+
+    const open =
+      toggle.getAttribute('aria-expanded') === 'true';
+
+    toggle.setAttribute(
+      'aria-expanded',
+      !open
+    );
+
+    nav.classList.toggle(
+      'open',
+      !open
+    );
+
+  }
+);
+
+
+nav.querySelectorAll('a').forEach(
+  a => {
+
+    a.addEventListener(
+      'click',
+      () => {
+
+        toggle.setAttribute(
+          'aria-expanded',
+          'false'
+        );
+
+        nav.classList.remove('open');
+
+      }
+    );
+
+  }
+);
+
+
+document.getElementById('year').textContent =
+  new Date().getFullYear();
+
+</script>
 
 </body>
 </html>
