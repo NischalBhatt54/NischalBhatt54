@@ -1,0 +1,2114 @@
+/* =========================================================
+   SHILA FOODS — CULTIVATION PAGE
+========================================================= */
+
+
+:root {
+
+    --cream: #F6F0E5;
+
+    --cream-dark: #EDE3D2;
+
+    --paper: #FAF7F0;
+
+    --navy: #172B38;
+
+    --slate: #35434A;
+
+    --text: #3F4648;
+
+    --muted: #77736C;
+
+    --copper: #A96F42;
+
+    --copper-dark: #8E5934;
+
+    --gold: #B28A52;
+
+    --orange: #B96F3B;
+
+    --border: rgba(23, 43, 56, 0.14);
+
+
+    --heading-font:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    --body-font:
+        "Manrope",
+        Arial,
+        sans-serif;
+
+
+    --page-width: 1180px;
+
+    --reading-width: 720px;
+
+}
+
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    background: var(--cream);
+
+    color: var(--text);
+
+    font-family: var(--body-font);
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+}
+
+
+img {
+
+    max-width: 100%;
+
+    height: auto;
+
+}
+
+
+a {
+
+    color: inherit;
+
+    text-decoration: none;
+
+}
+
+
+button {
+
+    font-family: inherit;
+
+}
+
+
+em {
+
+    font-family: var(--heading-font);
+
+    font-style: italic;
+
+    color: var(--navy);
+
+}
+
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.site-header {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    background:
+        rgba(246, 240, 229, 0.94);
+
+    backdrop-filter: blur(12px);
+
+    border-bottom:
+        1px solid var(--border);
+
+}
+
+
+.nav-container {
+
+    width:
+        min(
+            calc(100% - 48px),
+            var(--page-width)
+        );
+
+    min-height: 82px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+.nav-logo img {
+
+    width: 100px;
+
+    display: block;
+
+}
+
+
+.main-nav {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 34px;
+
+}
+
+
+.main-nav a {
+
+    position: relative;
+
+    color: var(--navy);
+
+    font-size: 12px;
+
+    letter-spacing: 0.13em;
+
+    text-transform: uppercase;
+
+}
+
+
+.main-nav a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -7px;
+
+    width: 0;
+
+    height: 1px;
+
+    background: var(--copper);
+
+    transition:
+        width 0.25s ease;
+
+}
+
+
+.main-nav a:hover,
+.main-nav a.active {
+
+    color: var(--copper-dark);
+
+}
+
+
+.main-nav a:hover::after,
+.main-nav a.active::after {
+
+    width: 100%;
+
+}
+
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+.menu-toggle {
+
+    display: none;
+
+    width: 42px;
+
+    height: 42px;
+
+    border: 0;
+
+    background: transparent;
+
+    cursor: pointer;
+
+}
+
+
+.menu-toggle span {
+
+    display: block;
+
+    width: 23px;
+
+    height: 1px;
+
+    margin: 5px auto;
+
+    background: var(--navy);
+
+    transition: 0.25s ease;
+
+}
+
+
+.menu-toggle.open span:nth-child(1) {
+
+    transform:
+        translateY(6px)
+        rotate(45deg);
+
+}
+
+
+.menu-toggle.open span:nth-child(2) {
+
+    opacity: 0;
+
+}
+
+
+.menu-toggle.open span:nth-child(3) {
+
+    transform:
+        translateY(-6px)
+        rotate(-45deg);
+
+}
+
+
+
+/* =========================================================
+   TYPOGRAPHY
+========================================================= */
+
+.eyebrow {
+
+    margin-bottom: 18px;
+
+    color: var(--copper-dark);
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.22em;
+
+    text-transform: uppercase;
+
+}
+
+
+h1,
+h2,
+h3 {
+
+    color: var(--navy);
+
+    font-family: var(--heading-font);
+
+    font-weight: 500;
+
+    line-height: 1.05;
+
+}
+
+
+h1 {
+
+    font-size:
+        clamp(55px, 7vw, 100px);
+
+}
+
+
+h2 {
+
+    font-size:
+        clamp(42px, 5vw, 68px);
+
+}
+
+
+h3 {
+
+    font-size: 31px;
+
+}
+
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.cultivation-hero {
+
+    position: relative;
+
+    min-height: 74vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    text-align: center;
+
+}
+
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    width:
+        min(
+            calc(100% - 40px),
+            900px
+        );
+
+}
+
+
+.cultivation-hero h1 {
+
+    margin-bottom: 28px;
+
+}
+
+
+.hero-description {
+
+    max-width: 650px;
+
+    margin: auto;
+
+    color: var(--slate);
+
+    font-size: 17px;
+
+}
+
+
+
+/* =========================================================
+   HERO MOUNTAINS
+========================================================= */
+
+.hero-mountain {
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: -100px;
+
+    width: 850px;
+
+    height: 400px;
+
+    transform:
+        translateX(-50%);
+
+    opacity: 0.11;
+
+}
+
+
+.hero-mountain::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 0;
+
+    width: 590px;
+
+    height: 290px;
+
+    transform:
+        translateX(-50%)
+        rotate(45deg);
+
+    border-top:
+        1px solid var(--copper);
+
+    border-left:
+        1px solid var(--copper);
+
+}
+
+
+.hero-mountain::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 35px;
+
+    width: 390px;
+
+    height: 190px;
+
+    transform:
+        translateX(-50%)
+        rotate(45deg);
+
+    border-top:
+        1px solid var(--gold);
+
+    border-left:
+        1px solid var(--gold);
+
+}
+
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.intro-section {
+
+    width:
+        min(
+            calc(100% - 48px),
+            var(--page-width)
+        );
+
+    margin: auto;
+
+    padding:
+        120px 0;
+
+}
+
+
+.intro-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        0.8fr 1.2fr;
+
+    gap: 90px;
+
+    align-items: start;
+
+}
+
+
+.intro-heading {
+
+    position: sticky;
+
+    top: 130px;
+
+}
+
+
+.intro-content {
+
+    max-width: var(--reading-width);
+
+}
+
+
+.intro-content .lead {
+
+    margin-bottom: 30px;
+
+    color: var(--navy);
+
+    font-family: var(--heading-font);
+
+    font-size: 28px;
+
+    line-height: 1.45;
+
+}
+
+
+.intro-content p {
+
+    margin-bottom: 22px;
+
+}
+
+
+
+/* =========================================================
+   PROCESS INTRO
+========================================================= */
+
+.process-intro {
+
+    padding:
+        115px 24px;
+
+    background: var(--navy);
+
+    color: var(--cream);
+
+}
+
+
+.process-intro-inner {
+
+    width:
+        min(
+            100%,
+            var(--page-width)
+        );
+
+    margin: auto;
+
+}
+
+
+.process-intro .eyebrow {
+
+    color: #C69A65;
+
+}
+
+
+.process-intro h2 {
+
+    color: var(--cream);
+
+    max-width: 800px;
+
+}
+
+
+.process-intro p:last-child {
+
+    max-width: 650px;
+
+    margin-top: 35px;
+
+    color:
+        rgba(246, 240, 229, 0.68);
+
+}
+
+
+
+/* =========================================================
+   PROCESS SECTION
+========================================================= */
+
+.process-section {
+
+    padding:
+        120px 24px;
+
+    background: var(--paper);
+
+}
+
+
+.process-container {
+
+    width:
+        min(
+            100%,
+            950px
+        );
+
+    margin: auto;
+
+}
+
+
+.process-step {
+
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+        100px 2px 1fr;
+
+    gap: 35px;
+
+    min-height: 290px;
+
+}
+
+
+.step-number {
+
+    width: 68px;
+
+    height: 68px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        1px solid var(--copper);
+
+    border-radius: 50%;
+
+    color: var(--copper-dark);
+
+    font-family: var(--heading-font);
+
+    font-size: 24px;
+
+}
+
+
+.step-line {
+
+    position: relative;
+
+    width: 1px;
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            to bottom,
+            var(--copper),
+            rgba(169, 111, 66, 0.12)
+        );
+
+}
+
+
+.process-step.last .step-line {
+
+    background: transparent;
+
+}
+
+
+.step-content {
+
+    padding-bottom: 70px;
+
+}
+
+
+.step-label {
+
+    margin-bottom: 7px;
+
+    color: var(--copper-dark);
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.19em;
+
+}
+
+
+.step-content h3 {
+
+    margin-bottom: 18px;
+
+    font-size: 40px;
+
+}
+
+
+.step-content p {
+
+    max-width: 680px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.step-note {
+
+    display: inline-block;
+
+    margin-top: 12px;
+
+    padding:
+        7px 12px;
+
+    border:
+        1px solid var(--border);
+
+    color: var(--muted);
+
+    font-size: 10px;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+
+}
+
+
+
+/* =========================================================
+   FLOW CHART
+========================================================= */
+
+.flow-section {
+
+    padding:
+        120px 24px;
+
+    background: var(--cream-dark);
+
+}
+
+
+.flow-container {
+
+    width:
+        min(
+            100%,
+            var(--page-width)
+        );
+
+    margin: auto;
+
+}
+
+
+.flow-container h2 {
+
+    margin-bottom: 60px;
+
+}
+
+
+.flow-chart {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+}
+
+
+.flow-node {
+
+    width: 115px;
+
+    min-height: 115px;
+
+    padding: 15px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    border:
+        1px solid var(--border);
+
+    background: var(--paper);
+
+}
+
+
+.flow-node span {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--copper-dark);
+
+    font-size: 10px;
+
+    letter-spacing: 0.14em;
+
+}
+
+
+.flow-node strong {
+
+    color: var(--navy);
+
+    font-family: var(--heading-font);
+
+    font-size: 20px;
+
+    font-weight: 500;
+
+    line-height: 1.1;
+
+}
+
+
+.flow-arrow {
+
+    color: var(--copper);
+
+    font-size: 20px;
+
+}
+
+
+
+/* =========================================================
+   FOCUS
+========================================================= */
+
+.focus-section {
+
+    padding:
+        120px 24px;
+
+}
+
+
+.focus-container {
+
+    width:
+        min(
+            100%,
+            var(--page-width)
+        );
+
+    margin: auto;
+
+}
+
+
+.focus-heading {
+
+    max-width: 760px;
+
+    margin-bottom: 65px;
+
+}
+
+
+.focus-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+
+}
+
+
+.focus-card {
+
+    min-height: 310px;
+
+    padding: 30px;
+
+    border:
+        1px solid var(--border);
+
+    background: var(--paper);
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease;
+
+}
+
+
+.focus-card:hover {
+
+    transform:
+        translateY(-5px);
+
+    border-color:
+        var(--copper);
+
+}
+
+
+.focus-icon {
+
+    width: 42px;
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 55px;
+
+    border:
+        1px solid var(--copper);
+
+    border-radius: 50%;
+
+    color: var(--copper-dark);
+
+    font-size: 10px;
+
+}
+
+
+.focus-card h3 {
+
+    margin-bottom: 15px;
+
+    font-size: 29px;
+
+}
+
+
+.focus-card p {
+
+    color: var(--slate);
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+}
+
+
+
+/* =========================================================
+   ENVIRONMENT
+========================================================= */
+
+.environment-section {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    background: var(--navy);
+
+}
+
+
+.environment-image {
+
+    min-height: 620px;
+
+    padding: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.image-placeholder {
+
+    width: 100%;
+
+    height: 100%;
+
+    min-height: 500px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    border:
+        1px solid rgba(246, 240, 229, 0.18);
+
+    background:
+        rgba(246, 240, 229, 0.035);
+
+}
+
+
+.image-placeholder span {
+
+    margin-bottom: 15px;
+
+    color: #C69A65;
+
+    font-size: 10px;
+
+    letter-spacing: 0.2em;
+
+}
+
+
+.image-placeholder strong {
+
+    color: var(--cream);
+
+    font-family: var(--heading-font);
+
+    font-size: 30px;
+
+    font-weight: 500;
+
+}
+
+
+.image-placeholder small {
+
+    margin-top: 10px;
+
+    color:
+        rgba(246, 240, 229, 0.45);
+
+    font-size: 11px;
+
+}
+
+
+.environment-content {
+
+    padding:
+        100px max(
+            35px,
+            calc((100vw - var(--page-width)) / 10)
+        );
+
+    align-self: center;
+
+}
+
+
+.environment-content .eyebrow {
+
+    color: #C69A65;
+
+}
+
+
+.environment-content h2 {
+
+    margin-bottom: 30px;
+
+    color: var(--cream);
+
+}
+
+
+.environment-content p {
+
+    max-width: 590px;
+
+    margin-bottom: 22px;
+
+    color:
+        rgba(246, 240, 229, 0.68);
+
+}
+
+
+.environment-content .lead {
+
+    color:
+        rgba(246, 240, 229, 0.88);
+
+    font-family: var(--heading-font);
+
+    font-size: 24px;
+
+    line-height: 1.5;
+
+}
+
+
+
+/* =========================================================
+   PROPRIETARY METHODS
+========================================================= */
+
+.proprietary-section {
+
+    padding:
+        130px 24px;
+
+    background: var(--paper);
+
+    text-align: center;
+
+}
+
+
+.proprietary-inner {
+
+    width:
+        min(
+            100%,
+            760px
+        );
+
+    margin: auto;
+
+}
+
+
+.proprietary-symbol {
+
+    width: 55px;
+
+    height: 55px;
+
+    margin:
+        0 auto 35px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        1px solid var(--copper);
+
+    border-radius: 50%;
+
+    color: var(--copper);
+
+    font-size: 18px;
+
+}
+
+
+.proprietary-section h2 {
+
+    margin-bottom: 35px;
+
+}
+
+
+.proprietary-section p:not(.eyebrow) {
+
+    max-width: 650px;
+
+    margin:
+        0 auto 18px;
+
+    color: var(--slate);
+
+}
+
+
+
+/* =========================================================
+   PRODUCT JOURNEY
+========================================================= */
+
+.product-journey {
+
+    padding:
+        120px 24px;
+
+    background: var(--cream-dark);
+
+}
+
+
+.product-journey-inner {
+
+    width:
+        min(
+            100%,
+            var(--page-width)
+        );
+
+    margin: auto;
+
+}
+
+
+.product-journey h2 {
+
+    margin-bottom: 70px;
+
+}
+
+
+.journey-flow {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: center;
+
+}
+
+
+.journey-item {
+
+    width: 190px;
+
+    text-align: center;
+
+}
+
+
+.journey-circle {
+
+    width: 75px;
+
+    height: 75px;
+
+    margin:
+        0 auto 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        1px solid var(--copper);
+
+    border-radius: 50%;
+
+    color: var(--copper-dark);
+
+    font-family: var(--heading-font);
+
+    font-size: 23px;
+
+}
+
+
+.journey-item h3 {
+
+    margin-bottom: 8px;
+
+    font-size: 28px;
+
+}
+
+
+.journey-item p {
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    line-height: 1.7;
+
+}
+
+
+.journey-connector {
+
+    width: 80px;
+
+    height: 1px;
+
+    margin-top: 37px;
+
+    background: var(--copper);
+
+    opacity: 0.55;
+
+}
+
+
+
+/* =========================================================
+   CLOSING
+========================================================= */
+
+.cultivation-closing {
+
+    position: relative;
+
+    min-height: 55vh;
+
+    padding:
+        90px 24px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    background: var(--cream);
+
+}
+
+
+.closing-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    width:
+        min(
+            100%,
+            700px
+        );
+
+}
+
+
+.closing-brand {
+
+    margin-bottom: 12px;
+
+    color: var(--copper-dark);
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.4em;
+
+}
+
+
+.closing-content h2 {
+
+    margin-bottom: 22px;
+
+}
+
+
+.closing-content > p:not(.closing-brand) {
+
+    max-width: 570px;
+
+    margin:
+        0 auto 25px;
+
+    color: var(--slate);
+
+}
+
+
+.closing-button {
+
+    display: inline-block;
+
+    padding:
+        13px 21px;
+
+    border:
+        1px solid var(--navy);
+
+    color: var(--navy);
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.13em;
+
+    text-transform: uppercase;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease;
+
+}
+
+
+.closing-button:hover {
+
+    background: var(--navy);
+
+    color: var(--cream);
+
+}
+
+
+.closing-mountain {
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: -130px;
+
+    width: 720px;
+
+    height: 350px;
+
+    transform:
+        translateX(-50%);
+
+    opacity: 0.12;
+
+}
+
+
+.closing-mountain::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 0;
+
+    width: 500px;
+
+    height: 240px;
+
+    transform:
+        translateX(-50%)
+        rotate(45deg);
+
+    border-top:
+        1px solid var(--copper);
+
+    border-left:
+        1px solid var(--copper);
+
+}
+
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer {
+
+    padding:
+        65px 24px 30px;
+
+    background: var(--navy);
+
+    color:
+        rgba(246, 240, 229, 0.72);
+
+}
+
+
+.footer-container {
+
+    width:
+        min(
+            100%,
+            var(--page-width)
+        );
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1.5fr 1fr 1fr;
+
+    gap: 60px;
+
+    padding-bottom: 55px;
+
+    border-bottom:
+        1px solid rgba(246, 240, 229, 0.14);
+
+}
+
+
+.footer-brand img {
+
+    width: 110px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.footer-brand p {
+
+    color: var(--cream);
+
+    font-family: var(--heading-font);
+
+    font-size: 20px;
+
+}
+
+
+.footer-links,
+.footer-legal {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+}
+
+
+.footer-links a,
+.footer-legal a {
+
+    font-size: 12px;
+
+}
+
+
+.footer-links a:hover,
+.footer-legal a:hover {
+
+    color: var(--cream);
+
+}
+
+
+.footer-bottom {
+
+    width:
+        min(
+            100%,
+            var(--page-width)
+        );
+
+    margin:
+        25px auto 0;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+}
+
+
+.footer-bottom p {
+
+    margin: 0;
+
+    color:
+        rgba(246, 240, 229, 0.5);
+
+    font-size: 11px;
+
+}
+
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+
+    .intro-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 45px;
+
+    }
+
+
+    .intro-heading {
+
+        position: static;
+
+    }
+
+
+    .focus-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .environment-section {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .environment-image {
+
+        min-height: 500px;
+
+    }
+
+
+    .image-placeholder {
+
+        min-height: 400px;
+
+    }
+
+}
+
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+
+    body {
+
+        font-size: 15px;
+
+    }
+
+
+    .nav-container {
+
+        min-height: 70px;
+
+    }
+
+
+    .nav-logo img {
+
+        width: 85px;
+
+    }
+
+
+    .menu-toggle {
+
+        display: block;
+
+    }
+
+
+    .main-nav {
+
+        position: absolute;
+
+        top: 70px;
+
+        left: 0;
+
+        width: 100%;
+
+        padding: 25px;
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 22px;
+
+        background: var(--cream);
+
+        border-bottom:
+            1px solid var(--border);
+
+    }
+
+
+    .main-nav.mobile-open {
+
+        display: flex;
+
+    }
+
+
+    .cultivation-hero {
+
+        min-height: 62vh;
+
+    }
+
+
+    .hero-description {
+
+        font-size: 15px;
+
+    }
+
+
+    .intro-section {
+
+        width:
+            calc(100% - 36px);
+
+        padding:
+            85px 0;
+
+    }
+
+
+    .process-intro {
+
+        padding:
+            85px 18px;
+
+    }
+
+
+    .process-section {
+
+        padding:
+            85px 18px;
+
+    }
+
+
+    .process-step {
+
+        grid-template-columns:
+            55px 1px 1fr;
+
+        gap: 20px;
+
+        min-height: 0;
+
+    }
+
+
+    .step-number {
+
+        width: 48px;
+
+        height: 48px;
+
+        font-size: 18px;
+
+    }
+
+
+    .step-content {
+
+        padding-bottom: 55px;
+
+    }
+
+
+    .step-content h3 {
+
+        font-size: 34px;
+
+    }
+
+
+    .flow-section {
+
+        padding:
+            85px 18px;
+
+    }
+
+
+    .flow-chart {
+
+        flex-direction: column;
+
+        gap: 7px;
+
+    }
+
+
+    .flow-node {
+
+        width: 100%;
+
+        min-height: 75px;
+
+        flex-direction: row;
+
+        justify-content: flex-start;
+
+        gap: 15px;
+
+        padding:
+            15px 20px;
+
+    }
+
+
+    .flow-node span {
+
+        margin: 0;
+
+    }
+
+
+    .flow-arrow {
+
+        transform:
+            rotate(90deg);
+
+    }
+
+
+    .focus-section {
+
+        padding:
+            85px 18px;
+
+    }
+
+
+    .focus-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .focus-card {
+
+        min-height: auto;
+
+    }
+
+
+    .environment-image {
+
+        min-height: 400px;
+
+        padding: 18px;
+
+    }
+
+
+    .image-placeholder {
+
+        min-height: 350px;
+
+    }
+
+
+    .environment-content {
+
+        padding:
+            75px 25px;
+
+    }
+
+
+    .proprietary-section {
+
+        padding:
+            90px 18px;
+
+    }
+
+
+    .product-journey {
+
+        padding:
+            85px 18px;
+
+    }
+
+
+    .journey-flow {
+
+        flex-direction: column;
+
+        align-items: center;
+
+    }
+
+
+    .journey-item {
+
+        width: 100%;
+
+        max-width: 260px;
+
+    }
+
+
+    .journey-connector {
+
+        width: 1px;
+
+        height: 45px;
+
+        margin: 0;
+
+    }
+
+
+    .cultivation-closing {
+
+        min-height: 50vh;
+
+    }
+
+
+    .footer-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+    }
+
+
+    .footer-bottom {
+
+        flex-direction: column;
+
+        gap: 5px;
+
+    }
+
+}
+
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+
+        scroll-behavior: auto;
+
+    }
+
+    * {
+
+        transition: none !important;
+
+    }
+
+}
+
+
+
+.brand-mini {
+  display: inline-flex;
+  align-items: baseline;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.brand-name {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  white-space: nowrap;
+}
+
+.brand-shila {
+  color: var(--copper);
+  font-family: var(--serif);
+  font-size: 1.65rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+}
+
+.brand-foods {
+  color: var(--navy);
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+
+
+.footer-logo {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.45rem;
+  line-height: 1;
+}
+
+.footer-shila {
+  color: var(--copper);
+  font-family: var(--serif);
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+}
+
+.footer-foods {
+  color: var(--cream2);
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
