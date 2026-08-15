@@ -1,0 +1,1850 @@
+/* =========================================================
+   SHILA FOODS — CORDYCEPS KNOWLEDGE PAGE
+========================================================= */
+
+
+:root {
+
+    --cream: #F6F0E5;
+
+    --cream-dark: #EDE3D2;
+
+    --paper: #FAF7F0;
+
+    --navy: #172B38;
+
+    --slate: #35434A;
+
+    --text: #3F4648;
+
+    --muted: #77736C;
+
+    --copper: #A96F42;
+
+    --copper-dark: #8E5934;
+
+    --gold: #B28A52;
+
+    --orange: #B96F3B;
+
+    --border: rgba(23, 43, 56, 0.14);
+
+
+    --heading-font:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    --body-font:
+        "Manrope",
+        Arial,
+        sans-serif;
+
+
+    --page-width: 1180px;
+
+    --reading-width: 720px;
+
+}
+
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    background: var(--cream);
+
+    color: var(--text);
+
+    font-family: var(--body-font);
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+}
+
+
+img {
+
+    max-width: 100%;
+
+    height: auto;
+
+}
+
+
+a {
+
+    color: inherit;
+
+    text-decoration: none;
+
+}
+
+
+button {
+
+    font-family: inherit;
+
+}
+
+
+em {
+
+    font-family: var(--heading-font);
+
+    font-style: italic;
+
+    color: var(--navy);
+
+}
+
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.site-header {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    background:
+        rgba(246, 240, 229, 0.94);
+
+    backdrop-filter: blur(12px);
+
+    border-bottom:
+        1px solid var(--border);
+
+}
+
+
+.nav-container {
+
+    width:
+        min(
+            calc(100% - 48px),
+            var(--page-width)
+        );
+
+    min-height: 82px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+.nav-logo img {
+
+    width: 100px;
+
+    display: block;
+
+}
+
+
+.main-nav {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 34px;
+
+}
+
+
+.main-nav a {
+
+    position: relative;
+
+    color: var(--navy);
+
+    font-size: 12px;
+
+    letter-spacing: 0.13em;
+
+    text-transform: uppercase;
+
+}
+
+
+.main-nav a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -7px;
+
+    width: 0;
+
+    height: 1px;
+
+    background: var(--copper);
+
+    transition:
+        width 0.25s ease;
+
+}
+
+
+.main-nav a:hover,
+.main-nav a.active {
+
+    color: var(--copper-dark);
+
+}
+
+
+.main-nav a:hover::after,
+.main-nav a.active::after {
+
+    width: 100%;
+
+}
+
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+.menu-toggle {
+
+    display: none;
+
+    width: 42px;
+
+    height: 42px;
+
+    border: 0;
+
+    background: transparent;
+
+    cursor: pointer;
+
+}
+
+
+.menu-toggle span {
+
+    display: block;
+
+    width: 23px;
+
+    height: 1px;
+
+    margin: 5px auto;
+
+    background: var(--navy);
+
+    transition: 0.25s ease;
+
+}
+
+
+.menu-toggle.open span:nth-child(1) {
+
+    transform:
+        translateY(6px)
+        rotate(45deg);
+
+}
+
+
+.menu-toggle.open span:nth-child(2) {
+
+    opacity: 0;
+
+}
+
+
+.menu-toggle.open span:nth-child(3) {
+
+    transform:
+        translateY(-6px)
+        rotate(-45deg);
+
+}
+
+
+
+/* =========================================================
+   TYPOGRAPHY
+========================================================= */
+
+.eyebrow {
+
+    margin-bottom: 18px;
+
+    color: var(--copper-dark);
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.22em;
+
+    text-transform: uppercase;
+
+}
+
+
+h1,
+h2,
+h3 {
+
+    color: var(--navy);
+
+    font-family: var(--heading-font);
+
+    font-weight: 500;
+
+    line-height: 1.05;
+
+}
+
+
+h1 {
+
+    font-size:
+        clamp(48px, 6.5vw, 88px);
+
+}
+
+
+h2 {
+
+    font-size:
+        clamp(40px, 5vw, 67px);
+
+}
+
+
+h3 {
+
+    font-size: 30px;
+
+}
+
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.knowledge-hero {
+
+    position: relative;
+
+    min-height: 72vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    text-align: center;
+
+}
+
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    width:
+        min(
+            calc(100% - 40px),
+            900px
+        );
+
+}
+
+
+.knowledge-hero h1 {
+
+    max-width: 900px;
+
+    margin:
+        0 auto 25px;
+
+}
+
+
+.hero-description {
+
+    max-width: 650px;
+
+    margin: auto;
+
+    color: var(--slate);
+
+    font-size: 17px;
+
+}
+
+
+
+/* =========================================================
+   MOUNTAIN GRAPHIC
+========================================================= */
+
+.hero-mountain {
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: -90px;
+
+    width: 760px;
+
+    height: 360px;
+
+    transform:
+        translateX(-50%);
+
+    opacity: 0.10;
+
+}
+
+
+.hero-mountain::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 0;
+
+    width: 520px;
+
+    height: 250px;
+
+    transform:
+        translateX(-50%)
+        rotate(45deg);
+
+    border-top:
+        1px solid var(--copper);
+
+    border-left:
+        1px solid var(--copper);
+
+}
+
+
+.hero-mountain::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 20px;
+
+    width: 370px;
+
+    height: 170px;
+
+    transform:
+        translateX(-50%)
+        rotate(45deg);
+
+    border-top:
+        1px solid var(--gold);
+
+    border-left:
+        1px solid var(--gold);
+
+}
+
+
+
+/* =========================================================
+   STANDARD CONTENT SECTIONS
+========================================================= */
+
+.knowledge-section {
+
+    width:
+        min(
+            calc(100% - 48px),
+            var(--page-width)
+        );
+
+    margin: auto;
+
+    padding:
+        120px 0;
+
+}
+
+
+.section-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        0.75fr 1.25fr;
+
+    gap: 90px;
+
+    align-items: start;
+
+}
+
+
+.section-heading {
+
+    position: sticky;
+
+    top: 130px;
+
+}
+
+
+.section-content {
+
+    max-width: var(--reading-width);
+
+}
+
+
+.section-content .lead {
+
+    color: var(--navy);
+
+    font-family: var(--heading-font);
+
+    font-size: 27px;
+
+    line-height: 1.45;
+
+    margin-bottom: 30px;
+
+}
+
+
+.section-content p {
+
+    margin-bottom: 22px;
+
+}
+
+
+
+/* =========================================================
+   SPECIES INTRO
+========================================================= */
+
+.species-section {
+
+    width: 100%;
+
+    padding:
+        110px max(
+            24px,
+            calc((100vw - var(--page-width)) / 2)
+        );
+
+    background: var(--cream-dark);
+
+}
+
+
+.species-inner {
+
+    max-width: var(--page-width);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 100px;
+
+    align-items: center;
+
+}
+
+
+.species-heading {
+
+    max-width: 550px;
+
+}
+
+
+.species-heading h2 {
+
+    margin-bottom: 25px;
+
+}
+
+
+.species-heading > p:last-child {
+
+    color: var(--slate);
+
+    font-size: 17px;
+
+}
+
+
+.species-facts {
+
+    border-top:
+        1px solid var(--border);
+
+}
+
+
+.fact {
+
+    padding:
+        22px 0;
+
+    border-bottom:
+        1px solid var(--border);
+
+}
+
+
+.fact span {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: var(--copper-dark);
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.17em;
+
+}
+
+
+.fact strong {
+
+    color: var(--navy);
+
+    font-family: var(--heading-font);
+
+    font-size: 23px;
+
+    font-weight: 500;
+
+}
+
+
+
+/* =========================================================
+   COMPARISON
+========================================================= */
+
+.comparison-section {
+
+    width:
+        min(
+            calc(100% - 48px),
+            1200px
+        );
+
+    margin: auto;
+
+    padding:
+        120px 0;
+
+}
+
+
+.comparison-heading {
+
+    max-width: 800px;
+
+    margin-bottom: 55px;
+
+}
+
+
+.comparison-heading h2 {
+
+    margin-bottom: 25px;
+
+}
+
+
+.comparison-heading > p:last-child {
+
+    max-width: 650px;
+
+    color: var(--slate);
+
+}
+
+
+.comparison-table-wrapper {
+
+    overflow-x: auto;
+
+    border:
+        1px solid var(--border);
+
+    background: var(--paper);
+
+}
+
+
+.comparison-table {
+
+    width: 100%;
+
+    min-width: 850px;
+
+    border-collapse: collapse;
+
+}
+
+
+.comparison-table th,
+.comparison-table td {
+
+    padding:
+        22px 24px;
+
+    text-align: left;
+
+    vertical-align: top;
+
+    border-bottom:
+        1px solid var(--border);
+
+}
+
+
+.comparison-table th {
+
+    background: var(--navy);
+
+    color: var(--cream);
+
+    font-family: var(--heading-font);
+
+    font-size: 21px;
+
+    font-weight: 500;
+
+}
+
+
+.comparison-table th em {
+
+    color: var(--cream);
+
+}
+
+
+.comparison-table td:first-child {
+
+    width: 20%;
+
+    color: var(--navy);
+
+    font-weight: 600;
+
+}
+
+
+.comparison-table td {
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+}
+
+
+.comparison-table tr:last-child td {
+
+    border-bottom: 0;
+
+}
+
+
+.table-note {
+
+    max-width: 900px;
+
+    margin:
+        20px auto 0;
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    text-align: center;
+
+}
+
+
+
+/* =========================================================
+   COMPOUNDS
+========================================================= */
+
+.compounds-section {
+
+    background: var(--paper);
+
+}
+
+
+.compound-list {
+
+    margin-top: 50px;
+
+    border-top:
+        1px solid var(--border);
+
+}
+
+
+.compound {
+
+    padding:
+        28px 0;
+
+    border-bottom:
+        1px solid var(--border);
+
+}
+
+
+.compound h3 {
+
+    margin-bottom: 10px;
+
+    font-size: 31px;
+
+}
+
+
+.compound p {
+
+    margin: 0;
+
+    font-size: 14px;
+
+}
+
+
+
+/* =========================================================
+   RESEARCH SECTION
+========================================================= */
+
+.research-section {
+
+    width: 100%;
+
+    padding:
+        120px max(
+            24px,
+            calc((100vw - var(--page-width)) / 2)
+        );
+
+    background: var(--navy);
+
+}
+
+
+.research-inner {
+
+    max-width: var(--page-width);
+
+    margin: auto;
+
+}
+
+
+.research-section h2 {
+
+    max-width: 850px;
+
+    color: var(--cream);
+
+}
+
+
+.research-section .eyebrow {
+
+    color: #C69A65;
+
+}
+
+
+.research-intro {
+
+    max-width: 720px;
+
+    margin:
+        30px 0 70px;
+
+    color:
+        rgba(246, 240, 229, 0.72);
+
+    font-size: 17px;
+
+}
+
+
+.evidence-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 1px;
+
+    border:
+        1px solid rgba(246, 240, 229, 0.14);
+
+}
+
+
+.evidence-card {
+
+    min-height: 350px;
+
+    padding: 35px;
+
+    border-right:
+        1px solid rgba(246, 240, 229, 0.14);
+
+}
+
+
+.evidence-card:last-child {
+
+    border-right: 0;
+
+}
+
+
+.evidence-card > span {
+
+    display: block;
+
+    margin-bottom: 55px;
+
+    color: #C69A65;
+
+    font-size: 11px;
+
+    letter-spacing: 0.15em;
+
+}
+
+
+.evidence-card h3 {
+
+    margin-bottom: 18px;
+
+    color: var(--cream);
+
+    font-size: 27px;
+
+}
+
+
+.evidence-card p {
+
+    color:
+        rgba(246, 240, 229, 0.68);
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+}
+
+
+
+/* =========================================================
+   IMPORTANT NOTE
+========================================================= */
+
+.important-note {
+
+    margin-top: 40px;
+
+    padding:
+        25px 28px;
+
+    border-left:
+        2px solid var(--copper);
+
+    background: var(--cream-dark);
+
+}
+
+
+.important-note strong {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--navy);
+
+    font-family: var(--heading-font);
+
+    font-size: 25px;
+
+}
+
+
+.important-note p {
+
+    margin: 0;
+
+    font-size: 13px;
+
+}
+
+
+
+/* =========================================================
+   EXPLORE
+========================================================= */
+
+.explore-section {
+
+    width:
+        min(
+            calc(100% - 48px),
+            var(--page-width)
+        );
+
+    margin: auto;
+
+    padding:
+        120px 0;
+
+}
+
+
+.explore-inner > h2 {
+
+    margin-bottom: 25px;
+
+}
+
+
+.explore-inner > p {
+
+    max-width: 700px;
+
+}
+
+
+.explore-links {
+
+    margin-top: 60px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+
+}
+
+
+.explore-card {
+
+    min-height: 290px;
+
+    padding: 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    border:
+        1px solid var(--border);
+
+    background: var(--paper);
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease;
+
+}
+
+
+.explore-card:hover {
+
+    transform:
+        translateY(-5px);
+
+    border-color:
+        var(--copper);
+
+}
+
+
+.explore-card > span {
+
+    color: var(--copper-dark);
+
+    font-size: 11px;
+
+    letter-spacing: 0.16em;
+
+}
+
+
+.explore-card h3 {
+
+    margin-top: 30px;
+
+    font-size: 30px;
+
+}
+
+
+.explore-card strong {
+
+    color: var(--copper-dark);
+
+    font-size: 11px;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+
+}
+
+
+
+/* =========================================================
+   CLOSING
+========================================================= */
+
+.knowledge-closing {
+
+    position: relative;
+
+    min-height: 52vh;
+
+    padding: 80px 24px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    background: var(--cream-dark);
+
+}
+
+
+.closing-mountain {
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: -120px;
+
+    width: 600px;
+
+    height: 300px;
+
+    transform:
+        translateX(-50%);
+
+    opacity: 0.12;
+
+}
+
+
+.closing-mountain::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 0;
+
+    width: 400px;
+
+    height: 200px;
+
+    transform:
+        translateX(-50%)
+        rotate(45deg);
+
+    border-top:
+        1px solid var(--copper);
+
+    border-left:
+        1px solid var(--copper);
+
+}
+
+
+.closing-brand {
+
+    position: relative;
+
+    z-index: 2;
+
+    margin-bottom: 10px;
+
+    color: var(--copper-dark);
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.4em;
+
+}
+
+
+.knowledge-closing h2 {
+
+    position: relative;
+
+    z-index: 2;
+
+    margin-bottom: 15px;
+
+}
+
+
+.knowledge-closing > p:not(.closing-brand) {
+
+    position: relative;
+
+    z-index: 2;
+
+    color: var(--muted);
+
+}
+
+
+.closing-button {
+
+    position: relative;
+
+    z-index: 2;
+
+    margin-top: 18px;
+
+    padding:
+        13px 21px;
+
+    border:
+        1px solid var(--navy);
+
+    color: var(--navy);
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.13em;
+
+    text-transform: uppercase;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease;
+
+}
+
+
+.closing-button:hover {
+
+    background: var(--navy);
+
+    color: var(--cream);
+
+}
+
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer {
+
+    padding:
+        65px 24px 30px;
+
+    background: var(--navy);
+
+    color:
+        rgba(246, 240, 229, 0.72);
+
+}
+
+
+.footer-container {
+
+    width:
+        min(
+            100%,
+            var(--page-width)
+        );
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1.5fr 1fr 1fr;
+
+    gap: 60px;
+
+    padding-bottom: 55px;
+
+    border-bottom:
+        1px solid rgba(246, 240, 229, 0.14);
+
+}
+
+
+.footer-brand img {
+
+    width: 110px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.footer-brand p {
+
+    color: var(--cream);
+
+    font-family: var(--heading-font);
+
+    font-size: 20px;
+
+}
+
+
+.footer-links,
+.footer-legal {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+}
+
+
+.footer-links a,
+.footer-legal a {
+
+    font-size: 12px;
+
+}
+
+
+.footer-links a:hover,
+.footer-legal a:hover {
+
+    color: var(--cream);
+
+}
+
+
+.footer-bottom {
+
+    width:
+        min(
+            100%,
+            var(--page-width)
+        );
+
+    margin:
+        25px auto 0;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+}
+
+
+.footer-bottom p {
+
+    margin: 0;
+
+    color:
+        rgba(246, 240, 229, 0.5);
+
+    font-size: 11px;
+
+}
+
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+
+    .section-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 45px;
+
+    }
+
+
+    .section-heading {
+
+        position: static;
+
+    }
+
+
+    .species-inner {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 60px;
+
+    }
+
+
+    .evidence-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .evidence-card:nth-child(2) {
+
+        border-right: 0;
+
+    }
+
+
+    .evidence-card:nth-child(-n+2) {
+
+        border-bottom:
+            1px solid rgba(246, 240, 229, 0.14);
+
+    }
+
+
+    .explore-links {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .explore-card {
+
+        min-height: 230px;
+
+    }
+
+
+    .footer-container {
+
+        grid-template-columns:
+            1fr 1fr;
+
+    }
+
+
+    .footer-brand {
+
+        grid-column:
+            1 / -1;
+
+    }
+
+}
+
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+
+    body {
+
+        font-size: 15px;
+
+    }
+
+
+    .nav-container {
+
+        min-height: 70px;
+
+    }
+
+
+    .nav-logo img {
+
+        width: 85px;
+
+    }
+
+
+    .menu-toggle {
+
+        display: block;
+
+    }
+
+
+    .main-nav {
+
+        position: absolute;
+
+        top: 70px;
+
+        left: 0;
+
+        width: 100%;
+
+        padding: 25px;
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 22px;
+
+        background: var(--cream);
+
+        border-bottom:
+            1px solid var(--border);
+
+    }
+
+
+    .main-nav.mobile-open {
+
+        display: flex;
+
+    }
+
+
+    .knowledge-hero {
+
+        min-height: 62vh;
+
+    }
+
+
+    .hero-description {
+
+        font-size: 15px;
+
+    }
+
+
+    .knowledge-section {
+
+        width:
+            calc(100% - 36px);
+
+        padding:
+            85px 0;
+
+    }
+
+
+    .species-section {
+
+        padding:
+            85px 18px;
+
+    }
+
+
+    .comparison-section {
+
+        width:
+            calc(100% - 36px);
+
+        padding:
+            85px 0;
+
+    }
+
+
+    .comparison-table-wrapper {
+
+        margin:
+            0 -2px;
+
+    }
+
+
+    .comparison-table th,
+    .comparison-table td {
+
+        padding:
+            17px;
+
+    }
+
+
+    .section-content .lead {
+
+        font-size: 23px;
+
+    }
+
+
+    .research-section {
+
+        padding:
+            85px 18px;
+
+    }
+
+
+    .evidence-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .evidence-card {
+
+        min-height: auto;
+
+        border-right: 0;
+
+        border-bottom:
+            1px solid rgba(246, 240, 229, 0.14);
+
+    }
+
+
+    .evidence-card:last-child {
+
+        border-bottom: 0;
+
+    }
+
+
+    .explore-section {
+
+        width:
+            calc(100% - 36px);
+
+        padding:
+            85px 0;
+
+    }
+
+
+    .knowledge-closing {
+
+        min-height: 45vh;
+
+    }
+
+
+    .footer-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+    }
+
+
+    .footer-brand {
+
+        grid-column: auto;
+
+    }
+
+
+    .footer-bottom {
+
+        flex-direction: column;
+
+        gap: 5px;
+
+    }
+
+}
+
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+
+        scroll-behavior: auto;
+
+    }
+
+    * {
+
+        transition: none !important;
+
+    }
+
+}
+
+
+.brand-mini {
+  display: inline-flex;
+  align-items: baseline;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.brand-name {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  white-space: nowrap;
+}
+
+.brand-shila {
+  color: var(--copper);
+  font-family: var(--serif);
+  font-size: 1.65rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+}
+
+.brand-foods {
+  color: var(--navy);
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+
+
+.footer-logo {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.45rem;
+  line-height: 1;
+}
+
+.footer-shila {
+  color: var(--copper);
+  font-family: var(--serif);
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+}
+
+.footer-foods {
+  color: var(--cream2);
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
